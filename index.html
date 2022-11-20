@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOGO DA VELHA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+  <main>
+    <h1>JOGO DA VELHA</h1>
+    <hr />
+
+    <div id="menu">
+      <h2 onclick="single()">Single Player</h2>
+      <br>
+      <h2 onclick="multi()">Multiplayer</h2>
+      <br>
+      <h2 onclick="sobre()">Sobre</h2>
+      <br>
+      <div style="text-align: center;">
+        <svg id="night" onclick="theme(1)" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path d="M21.546 11.646 19 9.101V5.5a.5.5 0 0 0-.5-.5h-3.601l-2.546-2.546a.5.5 0 0 0-.707 0L9.101 5H5.5a.5.5 0 0 0-.5.5v3.601l-2.546 2.546a.5.5 0 0 0 0 .707L5 14.899V18.5a.5.5 0 0 0 .5.5h3.601l2.546 2.546a.5.5 0 0 0 .707 0L14.899 19H18.5a.5.5 0 0 0 .5-.5v-3.601l2.546-2.546a.5.5 0 0 0 0-.707zM12 8a4 4 0 0 1 0 8"></path></svg>
+        <svg id="light" onclick="theme(2)" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255); display:none"><path d="m21.707 11.293-2-2L19 8.586V6a1 1 0 0 0-1-1h-2.586l-.707-.707-2-2a.999.999 0 0 0-1.414 0l-2 2L8.586 5H6a1 1 0 0 0-1 1v2.586l-.707.707-2 2a.999.999 0 0 0 0 1.414l2 2 .707.707V18a1 1 0 0 0 1 1h2.586l.707.707 2 2a.997.997 0 0 0 1.414 0l2-2 .707-.707H18a1 1 0 0 0 1-1v-2.586l.707-.707 2-2a.999.999 0 0 0 0-1.414zm-4.414 3-.293.293V17h-2.414l-.293.293-1 1L12 19.586l-1.293-1.293-1-1L9.414 17H7v-2.414l-.293-.293-1-1L4.414 12l1.293-1.293 1-1L7 9.414V7h2.414l.293-.293 1-1L12 4.414l1.293 1.293 1 1 .293.293H17v2.414l.293.293 1 1L19.586 12l-1.293 1.293-1 1z"></path><path d="M12 8v8c2.206 0 4-1.794 4-4s-1.794-4-4-4z"></path></svg>
+      </div>
+    </div>
+
+    <div id="game" style="display: none;">
+      <div class="game">
+        <button id="1" data-i="1"></button>
+        <button id="2" data-i="2"></button>
+        <button id="3" data-i="3"></button>
+        <button id="4" data-i="4"></button>
+        <button id="5" data-i="5"></button>
+        <button id="6" data-i="6"></button>
+        <button id="7" data-i="7"></button>
+        <button id="8" data-i="8"></button>
+        <button id="9" data-i="9"></button>
+      </div>
+      <h3 class="currentPlayer"></h3>
+    </div>
+    <div id="vencedor" style="display: none;">
+      <h1 class="vencedor"></h1>
+      <br>
+      <br>
+      <h2 onclick="restart()">Jogar Novamente</h2>
+      <br>
+      <h2 onclick="voltar()">Voltar</h2>
+    </div>
+
+    <div id="sobre" style="display: none;">
+      <h2>Eduardo Verbinen</h2>
+      <br>
+      <h2>Felipe Correa</h2>
+      <br>
+      <h2><a id="link" href="https://youtu.be/VCw2lZS_cTg" target="_blank">Link para o Vídeo</a></h2>
+      <br>
+      <h2 onclick="voltar()">Voltar</h2>
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
